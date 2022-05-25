@@ -1,6 +1,5 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-// import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/DeleteOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Close";
@@ -15,24 +14,25 @@ export default function FullFeaturedCrudGrid(props) {
   const [rows, setRows] = React.useState(initialRows);
   const [rowModesModel, setRowModesModel] = React.useState({});
 
-  const handleRowEditStart = (params, event) => {
-    event.defaultMuiPrevented = true;
-  };
-
-  const handleRowEditStop = (params, event) => {
-    event.defaultMuiPrevented = true;
-  };
-
-  const handleEditClick = (id) => () => {
-    setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.Edit } });
-  };
-
   const handleSaveClick = (id) => () => {
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
   };
 
-  const handleDeleteClick = (id) => () => {
+  const handleDeleteClick = (id) => async () => {
     setRows(rows.filter((row) => row.id !== id));
+    if (id) {
+      try {
+        const res = await fetch(`http://localhost:8080/wizards/${id}`, {
+          method: "delete",
+        });
+        const data = await res.json();
+        const result = {
+          status: res.status + "-" + res.statusText,
+          headers: { "Content-Type": res.headers.get("Content-Type") },
+          data: data,
+        };
+      } catch (err) {}
+    }
   };
 
   const handleCancelClick = (id) => () => {
@@ -40,11 +40,6 @@ export default function FullFeaturedCrudGrid(props) {
       ...rowModesModel,
       [id]: { mode: GridRowModes.View, ignoreModifications: true },
     });
-
-    const editedRow = rows.find((row) => row.id === id);
-    if (editedRow.isNew) {
-      setRows(rows.filter((row) => row.id !== id));
-    }
   };
 
   const processRowUpdate = (newRow) => {
@@ -54,6 +49,12 @@ export default function FullFeaturedCrudGrid(props) {
   };
 
   const columns = [
+    {
+      field: "id",
+      headerName: "ID",
+      width: 100,
+      editable: false,
+    },
     {
       field: "first_name",
       headerName: "First Name",
@@ -101,14 +102,6 @@ export default function FullFeaturedCrudGrid(props) {
         }
 
         return [
-        // TO DO: stretch goal | add editable feature in data grid
-        //   <GridActionsCellItem
-        //     icon={<EditIcon />}
-        //     label="Edit"
-        //     className="textPrimary"
-        //     onClick={handleEditClick(id)}
-        //     color="inherit"
-        //   />,
           <GridActionsCellItem
             icon={<DeleteIcon />}
             label="Delete"
@@ -138,8 +131,6 @@ export default function FullFeaturedCrudGrid(props) {
         columns={columns}
         editMode="row"
         rowModesModel={rowModesModel}
-        onRowEditStart={handleRowEditStart}
-        onRowEditStop={handleRowEditStop}
         processRowUpdate={processRowUpdate}
         componentsProps={{
           toolbar: { setRows, setRowModesModel },

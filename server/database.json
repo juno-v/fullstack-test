@@ -293,13 +293,6 @@
       "last_name": "Black",
       "email": "andromeda.black@hogwarts.com",
       "house": "slytherin"
-    },
-    {
-      "id": 13,
-      "first_name": "Juno",
-      "last_name": "Vue",
-      "email": "Delete me!!!",
-      "house": "gryffindor"
     }
   ]
 }
