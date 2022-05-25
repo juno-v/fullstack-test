@@ -72,7 +72,8 @@
         e) click the button once you are satisfied with the first and last name of the Wizard
         f) You will then see that the Sorting Hat has randomized the Wizard to one of the four houses.
         *** Users are able to shuffle to their hearts content for what house there is, 
-        but this is not how the story line goes :) I left it enabled for those that want to be Gryffindor but end up something else.... Like me.... A RavenClawERR ***
+        but this is not how the story line goes :) I left it enabled for 
+        those that want to be Gryffindor but end up something else.... Like me.... A RavenClawERR ***
         g) once satisfied, click the 'ASSIGN YOUR WIZARD TO ---- AND SORT A NEW WIZARD!'
         h) this will clear all the info in the form and allow you to restart 
         the process for the next Wizard!
