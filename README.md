@@ -8,7 +8,7 @@
 <br />
 
 ### 1) cd /app/server 
-### 2) json-server --watch database.json
+### 2) type 'json-server --watch database.json --port 8080' into terminal
 ### The URL to visit in development is under 'Resources' 
 ### For example: 'http://localhost:3000/wizards'
 ### The JSON server automatically creates endpoint such as: 
