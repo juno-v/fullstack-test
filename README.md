@@ -1,29 +1,73 @@
-# Project Instructions: 
+# Project Instructions:
 
-# Run 'npm install' in root directory of project 
+# Run 'npm install' in root directory of project to install all tools
 
-# Set up backend 
+# Run 'npm start' to start the front end
+
+# Set up backend
+
 ## Steps to start the back-end server:
-(*Server created with json-server*)
+
+(_Server created with json-server_)
 <br />
 
-### 1) cd /app/server 
+### 1) cd /app/server
+
 ### 2) type 'json-server --watch database.json --port 8080' into terminal
-### The URL to visit in development is under 'Resources' 
+
+### The URL to visit in development is under 'Resources'
+
 ### For example: 'http://localhost:3000/wizards'
-### The JSON server automatically creates endpoint such as: 
+
+### The JSON server automatically creates endpoint such as:
+
 <br />
 
-### GET    /employees
-### GET    /employees/{id}
-### POST   /employees
-### PUT    /employees/{id}
-### PATCH  /employees/{id}
-### DELETE /employees/{id}
+### GET /wizards
+
+### GET /wizards/{id}
+
+### POST /wizards
+
+### PUT /wizards/{id}
+
+### PATCH /wizards/{id}
+
+### DELETE /wizards/{id}
+
 <br />
 
-#### *** you do not need to start/stop to see a refresh list of the back end. you only need to refresh the URL to see the updated data.
-#### *** A POST, PUT or PATCH request should include 'Content-Type: application/json' header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.
+#### \*\*\* start and stop server for updates data when completing any requests
+
+#### \*\*\* A POST, PUT or PATCH request should include 'Content-Type: application/json' header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.
+
+# Take Home Project Instructions
+
+## Build a simple decomposed Key-Value store by implementing two services which communicate over a REST API.
+
+## The first service, serving at the backend, should implement a basic JSON Rest API which provides a programmable entrypoint for the key-value store (feel free to use an in-memory data structure, such as a map or dictionary). The second service should be a small web application which uses the API to allow a user to interact with the key-value store through a web interface.
+
+## The following functionality should be implemented:
+
+### Store a value at a given key.
+
+### Retrieve the value for a given key.
+
+### Delete a given key.
+
+#### Both the JSON Rest API and Web Interface should at a minimum be able to expose and implement these three functions.
+
+# Features I've added on top of requirements:
+
+## Edit Row
+
+## Success/Failure Alerts
+
+## Material UI Design
+
+## React Testing Library
+
+## Find each feature in their own branches/PRs for readability
 
 # Getting Started with Create React App
 
