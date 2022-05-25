@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import DataGrid from "../DataGrid/DataGrid.js";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,7 +41,15 @@ function a11yProps(index) {
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
+  const [wizards, setWizards] = React.useState(0);
+  React.useEffect(() => {
+    fetch(`http://localhost:8080/wizards?house=gryffindor`)
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setWizards(response));
+  }, []);
 
+  // although event is not used here, it is required as to utilize material ui basic tabs switching
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -62,6 +71,7 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         Gryffindor
+        <DataGrid />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Ravenclaw
