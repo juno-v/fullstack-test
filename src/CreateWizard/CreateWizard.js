@@ -78,7 +78,10 @@ export default function BasicTextFields() {
           color: "black",
         }}
       >
-        <h3>Enter Your Wizards First and Last Name to Enable Sorting</h3>
+        <h3>
+          Enter Your Wizards First and Last Name to Begin the Sorting Hat
+          Process
+        </h3>
       </InputLabel>
       <TextField
         value={newWizard.first_name}
