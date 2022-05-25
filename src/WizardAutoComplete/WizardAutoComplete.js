@@ -54,15 +54,15 @@ export default function ComboBox(props) {
       {wizardID !== null ? (
         <div>
           <p>
-            Name
+            Name:{" "}
             {wizardMatchingNameData.first_name +
               " " +
               wizardMatchingNameData.last_name}
           </p>
-          <p>Email: {wizardMatchingNameData.email}</p>
-          <p>House: {wizardMatchingNameData.house}</p>
+          <p>Email: {wizardMatchingNameData.email.toUpperCase()}</p>
+          <p>House: {wizardMatchingNameData.house.toUpperCase()}</p>
         </div>
-      ) : null}{" "}
+      ) : null}
       <br />
     </>
   );

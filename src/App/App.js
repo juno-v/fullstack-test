@@ -1,12 +1,18 @@
 import * as React from "react";
 import PageTabs from "../PageTabs/PageTabs";
 function App() {
+  const [allWizards, setAllWizards] = React.useState([]);
   const [gryffindorWizards, setGryffindorWizards] = React.useState([]);
   const [ravenclawWizards, setRavenclawWizards] = React.useState([]);
   const [hufflepuffWizards, setHufflepuffWizards] = React.useState([]);
   const [slytherinWizards, setSlytherinWizards] = React.useState([]);
   React.useEffect(() => {
     const baseUrl = "http://localhost:8080/wizards";
+
+    fetch(`http://localhost:8080/wizards`)
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setAllWizards(response));
     fetch(`${baseUrl}?house=gryffindor`)
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
@@ -28,6 +34,7 @@ function App() {
   return (
     <div>
       <PageTabs
+        allWizards={allWizards}
         gryffindorWizards={gryffindorWizards}
         ravenclawWizards={ravenclawWizards}
         hufflepuffWizards={hufflepuffWizards}

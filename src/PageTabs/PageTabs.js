@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import DataGrid from "../DataGrid/DataGrid.js";
 import CreateWizard from "../CreateWizard/CreateWizard";
+import WizardAutoComplete from "../WizardAutoComplete/WizardAutoComplete";
 import { styled } from "@mui/material/styles";
 
 const PREFIX = "BasicTabs";
@@ -63,6 +64,7 @@ function a11yProps(index) {
 export default function BasicTabs(props) {
   const [value, setValue] = React.useState(0);
   const {
+    allWizards,
     gryffindorWizards,
     ravenclawWizards,
     hufflepuffWizards,

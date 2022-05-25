@@ -12,7 +12,7 @@ export const postWizard = (newWizard) => {
         alert("Successfully sent off your new wizard. On to the next one!");
       }
       if (!response.ok) {
-        alert("Rrror sending off new wizard, please try again");
+        alert("Error sending off new wizard, please try again");
       }
     })
     .catch((error) => console.error("Error:", error))
