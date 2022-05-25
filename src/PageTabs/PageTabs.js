@@ -41,12 +41,27 @@ function a11yProps(index) {
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
-  const [wizards, setWizards] = React.useState(0);
+  const [gryffindorWizards, setGryffindorWizards] = React.useState([]);
+  const [ravenclawWizards, setRavenclawWizards] = React.useState([]);
+  const [hufflepuffWizards, setHufflepuffWizards] = React.useState([]);
+  const [slytherinWizards, setSlytherinWizards] = React.useState([]);
   React.useEffect(() => {
     fetch(`http://localhost:8080/wizards?house=gryffindor`)
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
-      .then((response) => setWizards(response));
+      .then((response) => setGryffindorWizards(response));
+    fetch(`http://localhost:8080/wizards?house=ravenclaw`)
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setRavenclawWizards(response));
+    fetch(`http://localhost:8080/wizards?house=hufflepuff`)
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setHufflepuffWizards(response));
+    fetch(`http://localhost:8080/wizards?house=slytherin`)
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setSlytherinWizards(response));
   }, []);
 
   // although event is not used here, it is required as to utilize material ui basic tabs switching
@@ -71,19 +86,23 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         Gryffindor
-        <DataGrid wizards={wizards} />
+        <DataGrid wizards={gryffindorWizards} />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Ravenclaw
+        <DataGrid wizards={ravenclawWizards} />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Hufflepuff
+        <DataGrid wizards={hufflepuffWizards} />
       </TabPanel>
       <TabPanel value={value} index={3}>
         Slytherin
+        <DataGrid wizards={slytherinWizards} />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Sorting Hat
+        Sorting Hat (stretch goal, randomize data and post into wizards
+        database)
       </TabPanel>
     </Box>
   );
