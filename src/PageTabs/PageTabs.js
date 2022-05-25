@@ -60,33 +60,14 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function BasicTabs(props) {
   const [value, setValue] = React.useState(0);
-  // TO DO : consider consolidating this into something smaller to maintain all since it's repeating and put into ../services/../services
-  const [gryffindorWizards, setGryffindorWizards] = React.useState([]);
-  const [ravenclawWizards, setRavenclawWizards] = React.useState([]);
-  const [hufflepuffWizards, setHufflepuffWizards] = React.useState([]);
-  const [slytherinWizards, setSlytherinWizards] = React.useState([]);
-  React.useEffect(() => {
-    const baseUrl = "http://localhost:8080/wizards";
-    fetch(`${baseUrl}?house=gryffindor`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setGryffindorWizards(response));
-    fetch(`${baseUrl}?house=ravenclaw`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setRavenclawWizards(response));
-    fetch(`${baseUrl}?house=hufflepuff`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setHufflepuffWizards(response));
-    fetch(`${baseUrl}?house=slytherin`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setSlytherinWizards(response));
-  }, []);
-
+  const {
+    gryffindorWizards,
+    ravenclawWizards,
+    hufflepuffWizards,
+    slytherinWizards,
+  } = props;
   // although event is not used here, it is required as to utilize material ui basic tabs switching
   const handleChange = (event, newValue) => {
     setValue(newValue);
