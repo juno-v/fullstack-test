@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import DataGrid from "../DataGrid/DataGrid.js";
 import CreateWizard from "../CreateWizard/CreateWizard";
-import { InputLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const PREFIX = "BasicTabs";
@@ -24,6 +23,7 @@ const Header = styled("div")(({ theme }) => ({
     width: "100%",
     color: "black",
     marginBottom: "1vh",
+    fontWeight: "bold",
   },
 }));
 

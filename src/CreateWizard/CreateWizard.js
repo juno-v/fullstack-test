@@ -52,6 +52,12 @@ export default function BasicTextFields() {
 
   const onSubmitWizardData = () => {
     postWizard(newWizard);
+    setNewWizard(() => ({
+      first_name: "",
+      last_name: "",
+      email: "",
+      house: "",
+    }));
   };
   return (
     <Box
@@ -71,7 +77,7 @@ export default function BasicTextFields() {
           color: "black",
         }}
       >
-        <h1>Enter Your Wizards First and Last Name to Enable Sorting</h1>
+        <h3>Enter Your Wizards First and Last Name to Enable Sorting</h3>
       </InputLabel>
       <TextField
         value={newWizard.first_name}
@@ -103,7 +109,7 @@ export default function BasicTextFields() {
           Your Wizard Goes to House: {newWizard.house.toUpperCase()}
           <Box>
             <Button
-              sx={{ height: "5vh", width: "23vw", marginTop: "2vh" }}
+              sx={{ height: "5vh", width: "30vw", marginTop: "2vh" }}
               onClick={onSubmitWizardData}
               variant="contained"
             >

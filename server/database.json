@@ -293,6 +293,13 @@
       "last_name": "Black",
       "email": "andromeda.black@hogwarts.com",
       "house": "slytherin"
+    },
+    {
+      "first_name": "wizard",
+      "last_name": "1",
+      "email": "wizard.1@hogwarts.com",
+      "house": "slytherin",
+      "id": 43
     }
   ]
 }

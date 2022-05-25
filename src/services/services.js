@@ -6,7 +6,15 @@ export const postWizard = (newWizard) => {
     },
     body: JSON.stringify(newWizard),
   })
-    .then((response) => response.json())
+    .then((response) => {
+      response.json();
+      if (response.ok) {
+        alert("successfully sent off your new wizard. on to the next one!");
+      }
+      if (!response.ok) {
+        alert("error sending off new wizard, please try again");
+      }
+    })
     .catch((error) => console.error("Error:", error))
     .then((response) => console.log("Success:", JSON.stringify(response)));
 };
