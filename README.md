@@ -1,77 +1,73 @@
-# Project Instructions:
+# Documentation
 
-# Run 'npm install' in root directory of project to install all tools
+## Project Summary
 
-# Run 'npm start' to start the front end
+    This project utilizes key-value pair data using json server as the back end paired with a React front end and Material UI for design.
+    The theme is based off of a book series: Harry Potter.
+    In this project user(s) will be able to manipulate data for Wizards.
+        Check the 'Features Completed' section for what features exist.
 
-# Set up backend
+    Below are some images of the UI for an over view.
+    *** note: due to a time limit, UI may not look as robust and appealing ***
+    ![data-grid](./READMEImages/CreateWizard.png?raw=true "Create Wizard")
+    ![create-wizard](./READMEImages/DataGrid.png?raw=true "Data Grid")
+    ![find-wizard](./READMEImages/FindWizard.png/?raw=true "Find Wizard")
 
-## Steps to start the back-end server:
+## Front End Set Up
 
-(_Server created with json-server_)
-<br />
+    1) run 'npm install' in root directory of project /app to install all tools
+    2) run 'npm start' to start the React project
+    3) it should automatically start in your browser if you have a tab open, if not, navigate to 'http://localhost:3000'
+    4) You won't see data if you start the front end first, so move on to the next steps and start up your back end
 
-### 1) cd /app/server
+## Back End Set Up
 
-### 2) type 'json-server --watch database.json --port 8080' into terminal
+    1) cd in to the 'server' folder
+    *** located in app/server/ ***
+    1.2) run 'json-server --watch database.json --port 8080'
+    *** this will start the server in your localhost/8080 ***
+    1.3) The URL to visit in development is under 'Resources'
+         For example: 'http://localhost:8080/wizards'
+    2) endpoint details:
+        GET /wizards - get all wizards
+        GET /wizards/{id} - get wizard by ID
+        POST /wizards - create a new wizard, ID is automatically generated
+        PUT /wizards/{id} - edit a wizard by ID
+        PATCH /wizards/{id} - patch a wizard by ID
+        DELETE /wizards/{id} - delete a wizard by ID
+    *** you can test the endpoints by utilizing programs like Postman/Incomnia ***
+    3) data object structure example:  {
+                              "id": int,
+                              "first_name": "string",
+                              "last_name": "string",
+                              "email": "string", // first_name.last_name@hogwarts.com
+                              "house": "string" // gryffindor, ravenclaw, hufflepuff, slytherin
+                            }
 
-### The URL to visit in development is under 'Resources'
+# Features Completed + Instructions
 
-### For example: 'http://localhost:3000/wizards'
-
-### The JSON server automatically creates endpoint such as:
-
-<br />
-
-### GET /wizards
-
-### GET /wizards/{id}
-
-### POST /wizards
-
-### PUT /wizards/{id}
-
-### PATCH /wizards/{id}
-
-### DELETE /wizards/{id}
-
-<br />
-
-#### \*\*\* start and stop server for updates data when completing any requests
-
-#### \*\*\* A POST, PUT or PATCH request should include 'Content-Type: application/json' header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.
-
-# Take Home Project Instructions
-
-## Build a simple decomposed Key-Value store by implementing two services which communicate over a REST API.
-
-## The first service, serving at the backend, should implement a basic JSON Rest API which provides a programmable entrypoint for the key-value store (feel free to use an in-memory data structure, such as a map or dictionary). The second service should be a small web application which uses the API to allow a user to interact with the key-value store through a web interface.
-
-## The following functionality should be implemented:
-
-### Store a value at a given key. (Create a new wizard, verify with dev/HR if that's what they mean by this requirement)
-
-### Retrieve the value for a given key. (Search for wizard names)
-
-### Delete a given key. (Delete wizard) *DONE
-
-#### Both the JSON Rest API and Web Interface should at a minimum be able to expose and implement these three functions.
-
-# Features I've added on top of requirements:
-
-## Edit Row
-
-## Success/Failure Alerts
-
-## Material UI Design
-
-## React Testing Library
-
-## Find each feature in their own branches/PRs for readability
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    1) Get all Wizards and display in a Data Grid in their own House Tabs
+        a) click any of the tabs for the Hogwarts House (GRYFFINDOR, RAVENCLAW, HUFFLEPUFF, SLYTHERIN)
+        b) you may need to refresh and/or click a different tab and click the tab again
+        c) each tab consits of a Data Grid with the Wizards that belong in that house
+    1.2) Get all the data from a selected Wizard in a drop down list
+        a) go to the 'FIND WIZARD INFORMATION' tab
+        b) click on the 'Wizard Names' drop down and select any name with you mouse
+        c) once you select a name, the Wizard's data will pop down below the selector
+    2) Delete a wizard from database and remove row from Data Grid
+        a) navigate to any house and click the 'delete' icon next to any wizard
+        b) you will get an alert for a success/failure of Wizard deletion
+        c) you may need to refresh and come back to the tab you delete the Wizard from to see the updates
+    3) Create a New Wizard
+        a) navigate to 'SORTING HAT'
+        *** in the movies, you will see Wizards lined up in the dining hall to wear the Sorting Hat to tell them which house they belong to. ***
+        c) here you are required to type in a 'First Name' and a 'Last Name'
+        d) this will then enable the 'PUT THE SORTING HAT ON YOUR NEW WIZARD' button
+        e) click the buton once you are satisfied with the first and last name of the Wizard
+        f) You will then see that the Sorting Hat has randomized the Wizard to one of the four houses.
+        *** Users are able to shuffle to their hearts content for what house there is, but this is not how the story line goes :) I left it enabled for those that want to be Gryffindor but end up something else.... Like me.... A RavenClawERR ***
+        g) once satisfied, click the 'ASSIGN YOUR WIZARD TO ---- AND SORT A NEW WIZARD!'
+        h) this will clear all the info in the form and allow you to restart the process for the next Wizard!
 
 ## Available Scripts
 
