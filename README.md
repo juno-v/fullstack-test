@@ -10,7 +10,7 @@
 
 ## Below are some images of the UI for an over view.
 *** note: due to a time limit, UI may not look as robust and appealing ***
-![Data Grid](CreateWizard.ping)
+![Create Wizard](CreateWizard.png)
 
 ## Front End Set Up
 
