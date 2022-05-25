@@ -74,7 +74,7 @@ export default function FullFeaturedCrudGrid(props) {
       cellClassName: "actions",
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
-
+        // edit mode is a stretch goal
         if (isInEditMode) {
           return [
             <GridActionsCellItem

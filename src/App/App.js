@@ -9,6 +9,9 @@ function App() {
   React.useEffect(() => {
     const baseUrl = "http://localhost:8080/wizards";
 
+    // should find a way to condense these into ../services/services/
+    // tried to place this at the parent component so data will load right away,
+    // but it doesn't load right away still
     fetch(`http://localhost:8080/wizards`)
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))

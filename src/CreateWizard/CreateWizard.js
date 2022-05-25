@@ -35,9 +35,8 @@ export default function BasicTextFields() {
   };
   const onSubmitWizardName = () => {
     setToggleWizardSorting(!toggleWizardSorting);
-    // update new wizards object every time new house sorted for Wizard
     const hogwartsHouseList = [
-      "hogwarts",
+      "gryffindor",
       "ravenclaw",
       "hufflepuff",
       "slytherin",
@@ -51,6 +50,7 @@ export default function BasicTextFields() {
   };
 
   const onSubmitWizardData = () => {
+    // users can shuffle as many times as they want, so created another button for finalizing a house
     postWizard(newWizard);
     setToggleWizardSorting(!toggleWizardSorting);
     setNewWizard(() => ({
