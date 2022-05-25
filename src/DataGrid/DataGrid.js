@@ -101,13 +101,14 @@ export default function FullFeaturedCrudGrid(props) {
         }
 
         return [
-          <GridActionsCellItem
-            icon={<EditIcon />}
-            label="Edit"
-            className="textPrimary"
-            onClick={handleEditClick(id)}
-            color="inherit"
-          />,
+        // TO DO: stretch goal | add editable feature in data grid
+        //   <GridActionsCellItem
+        //     icon={<EditIcon />}
+        //     label="Edit"
+        //     className="textPrimary"
+        //     onClick={handleEditClick(id)}
+        //     color="inherit"
+        //   />,
           <GridActionsCellItem
             icon={<DeleteIcon />}
             label="Delete"
