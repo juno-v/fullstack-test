@@ -1,33 +1,107 @@
-# Project Instructions: 
+# Documentation
 
-# Run 'npm install' in root directory of project 
+## Project Summary
 
-# Set up backend 
-## Steps to start the back-end server:
-(*Server created with json-server*)
-<br />
+    This project utilizes key-value pair data using json server as the back end
+    paired with a React front end and Material UI for design.
+    The theme is based off of a book series: Harry Potter.
+    In this project user(s) will be able to manipulate data for Wizards.
+        Check the 'Features Completed' section for what features exist.
 
-### 1) cd /app/server 
-### 2) type 'json-server --watch database.json --port 8080' into terminal
-### The URL to visit in development is under 'Resources' 
-### For example: 'http://localhost:3000/wizards'
-### The JSON server automatically creates endpoint such as: 
-<br />
+## Project Structure 
+    - the database lives in a .json file within app/server 
+    - app/src/ show all of the components each in their older folders 
+    - design is used with the Material UI SX prop or the new styles integration, 
+    no external css files 
+    - app/src/services contain a couple of requests
+    - images of project are located at the root 
 
-### GET    /employees
-### GET    /employees/{id}
-### POST   /employees
-### PUT    /employees/{id}
-### PATCH  /employees/{id}
-### DELETE /employees/{id}
-<br />
+    *** the project was created by doing each feature in their own branch, feel free to look into the branches to see the file changes ***
 
-#### *** you do not need to start/stop to see a refresh list of the back end. you only need to refresh the URL to see the updated data.
-#### *** A POST, PUT or PATCH request should include 'Content-Type: application/json' header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.
+## Below are some images of the UI for an over view.
 
-# Getting Started with Create React App
+**_ note: due to a time limit, UI may not look as robust and appealing _**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Creating a Wizard
+
+![Create Wizard](CreateWizard.png)
+
+#### Show Wizards in a Data Grid
+
+![Data Grid](DataGrid.png)
+
+#### Find a Wizard's information
+
+![Find Wizard](FindWizard.png)
+
+## Front End Set Up
+
+    1) run 'npm install' in root directory of project /app to install all tools
+    2) run 'npm start' to start the React project
+    3) it should automatically start in your browser if you have a tab open,
+    if not, navigate to 'http://localhost:3000'
+    4) You won't see data if you start the front end first, so move on to
+    the next steps and start up your back end
+
+## Back End Set Up
+
+    1) cd in to the 'server' folder
+    *** located in app/server/ ***
+    1.2) run 'json-server --watch database.json --port 8080'
+    *** this will start the server in your localhost/8080 ***
+    1.3) The URL to visit in development is under 'Resources'
+         For example: 'http://localhost:8080/wizards'
+    2) endpoint details:
+        GET /wizards - get all wizards
+        GET /wizards/{id} - get wizard by ID
+        POST /wizards - create a new wizard, ID is automatically generated
+        PUT /wizards/{id} - edit a wizard by ID
+        PATCH /wizards/{id} - patch a wizard by ID
+        DELETE /wizards/{id} - delete a wizard by ID
+    *** you can test the endpoints by utilizing programs like Postman/Incomnia ***
+    3) data object structure example:  {
+                              "id": int,
+                              "first_name": "string",
+                              "last_name": "string",
+                              "email": "string", // first_name.last_name@hogwarts.com
+                              "house": "string" // gryffindor, ravenclaw, hufflepuff, slytherin
+                            }
+
+# Features Completed + Instructions
+
+    1) Get all Wizards and display in a Data Grid in their own House Tabs
+        a) click any of the tabs for the Hogwarts House (GRYFFINDOR, RAVENCLAW,
+        HUFFLEPUFF, SLYTHERIN)
+        b) you may need to refresh and/or click a different tab and click the tab again
+        c) each tab consits of a Data Grid with the Wizards that belong in that house
+    1.2) Get all the data from a selected Wizard in a drop down list
+        a) go to the 'FIND WIZARD INFORMATION' tab
+        b) click on the 'Wizard Names' drop down and select any name with you mouse
+        c) once you select a name, the Wizard's data will pop down below the selector
+    2) Delete a wizard from database and remove row from Data Grid
+        a) navigate to any house and click the 'delete' icon next to any wizard
+        b) you will get an alert for a success/failure of Wizard deletion
+        c) you may need to refresh and come back to the tab you delete the Wizard
+        from to see the updates
+    3) Create a New Wizard
+        a) navigate to 'SORTING HAT'
+        *** in the movies, you will see Wizards lined up in the dining hall
+        to wear the Sorting Hat to tell them which house they belong to. ***
+        c) here you are required to type in a 'First Name' and a 'Last Name'
+        d) this will then enable the 'PUT THE SORTING HAT ON YOUR NEW WIZARD' button
+        e) click the button once you are satisfied with the first and last name of the Wizard
+        f) You will then see that the Sorting Hat has randomized the Wizard to one of the four houses.
+        *** Users are able to shuffle to their hearts content for what house there is,
+        but this is not how the story line goes :) I left it enabled for
+        those that want to be Gryffindor but end up something else.... Like me.... A RavenClawERR ***
+        g) once satisfied, click the 'ASSIGN YOUR WIZARD TO ---- AND SORT A NEW WIZARD!'
+        h) this will clear all the info in the form and allow you to restart
+        the process for the next Wizard!
+
+    Stretch Goals
+        1) add testing with React Testing Library
+        2) add confirm delete when deleting a wizard
+        3) enable PUT/PATCH features
 
 ## Available Scripts
 
