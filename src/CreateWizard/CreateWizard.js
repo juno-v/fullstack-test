@@ -101,7 +101,7 @@ export default function BasicTextFields() {
       />
       <Button
         disabled={
-          newWizard.first_name.length === 0 && newWizard.last_name.length === 0
+          newWizard.last_name.length === 0 || newWizard.first_name.length == 0
         }
         onClick={onSubmitWizardName}
         variant="contained"
