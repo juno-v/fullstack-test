@@ -73,6 +73,14 @@
                               "email": "string", // first_name.last_name@hogwarts.com
                               "house": "string" // gryffindor, ravenclaw, hufflepuff, slytherin
                             }
+    4) if you see this error 'Some error occurred Error: listen EACCES: permission denied 8080\'
+    it might be an issue with Windows, use a Mac device to clone and test locally 
+    5) if you are having any errors with the cmd try installing the json server individually or globally with the following cmds: 
+
+        npm install -g json-server
+
+    If you install it locally in your project, use npx to run it
+        npx json-server --watch db.json
 
 # Features Completed + Instructions
 
