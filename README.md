@@ -49,11 +49,11 @@
 
 ## The following functionality should be implemented:
 
-### Store a value at a given key.
+### Store a value at a given key. (Create a new wizard, verify with dev/HR if that's what they mean by this requirement)
 
-### Retrieve the value for a given key.
+### Retrieve the value for a given key. (Search for wizard names)
 
-### Delete a given key.
+### Delete a given key. (Delete wizard) *DONE
 
 #### Both the JSON Rest API and Web Interface should at a minimum be able to expose and implement these three functions.
 
