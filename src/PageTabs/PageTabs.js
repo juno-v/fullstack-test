@@ -4,7 +4,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import DataGrid from "../DataGrid/DataGrid.js";
+import DataGrid from "../DataGrid/DataGrid";
+import WizardAutoComplete from "../WizardAutoComplete/WizardAutoComplete";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,6 +43,7 @@ function a11yProps(index) {
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
   // TO DO : consider consildating this into something smaller to maintain all since it's repeating
+  const [allWizards, setAllWizards] = React.useState([]);
   const [gryffindorWizards, setGryffindorWizards] = React.useState([]);
   const [ravenclawWizards, setRavenclawWizards] = React.useState([]);
   const [hufflepuffWizards, setHufflepuffWizards] = React.useState([]);
@@ -63,6 +65,10 @@ export default function BasicTabs() {
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
       .then((response) => setSlytherinWizards(response));
+    fetch(`http://localhost:8080/wizards`)
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setAllWizards(response));
   }, []);
 
   // although event is not used here, it is required as to utilize material ui basic tabs switching
@@ -83,6 +89,7 @@ export default function BasicTabs() {
           <Tab label="Hufflepuff" {...a11yProps(2)} />
           <Tab label="Slytherin" {...a11yProps(3)} />
           <Tab label="Sorting Hat" {...a11yProps(4)} />
+          <Tab label="Find Wizard Information" {...a11yProps(5)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -104,6 +111,10 @@ export default function BasicTabs() {
       <TabPanel value={value} index={4}>
         Sorting Hat (stretch goal, randomize data and post into wizards
         database)
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        Find Wizard Information
+        <WizardAutoComplete allWizards={allWizards} />
       </TabPanel>
     </Box>
   );
