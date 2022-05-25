@@ -9,10 +9,10 @@ export const postWizard = (newWizard) => {
     .then((response) => {
       response.json();
       if (response.ok) {
-        alert("successfully sent off your new wizard. on to the next one!");
+        alert("Successfully sent off your new wizard. On to the next one!");
       }
       if (!response.ok) {
-        alert("error sending off new wizard, please try again");
+        alert("Rrror sending off new wizard, please try again");
       }
     })
     .catch((error) => console.error("Error:", error))

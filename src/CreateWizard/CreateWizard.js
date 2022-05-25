@@ -52,6 +52,7 @@ export default function BasicTextFields() {
 
   const onSubmitWizardData = () => {
     postWizard(newWizard);
+    setToggleWizardSorting(!toggleWizardSorting);
     setNewWizard(() => ({
       first_name: "",
       last_name: "",

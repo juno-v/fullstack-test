@@ -300,6 +300,13 @@
       "email": "wizard.1@hogwarts.com",
       "house": "slytherin",
       "id": 43
+    },
+    {
+      "first_name": "wizard",
+      "last_name": "2",
+      "email": "wizard.2@hogwarts.com",
+      "house": "hufflepuff",
+      "id": 44
     }
   ]
 }
