@@ -3,6 +3,8 @@ import Box from "@mui/material/Box";
 import DeleteIcon from "@mui/icons-material/DeleteOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Close";
+import { deleteWizard } from "../services/services";
+
 import {
   GridRowModes,
   DataGridPro,
@@ -18,20 +20,10 @@ export default function FullFeaturedCrudGrid(props) {
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
   };
 
-  const handleDeleteClick = (id) => async () => {
+  const handleDeleteClick = (id) => () => {
     setRows(rows.filter((row) => row.id !== id));
     if (id) {
-      try {
-        const res = await fetch(`http://localhost:8080/wizards/${id}`, {
-          method: "delete",
-        });
-        const data = await res.json();
-        const result = {
-          status: res.status + "-" + res.statusText,
-          headers: { "Content-Type": res.headers.get("Content-Type") },
-          data: data,
-        };
-      } catch (err) {}
+      deleteWizard(id);
     }
   };
 
