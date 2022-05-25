@@ -1,27 +1,45 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
+import DataGrid from "../DataGrid/DataGrid";
 
 export default function ComboBox(props) {
-  const handleFindWizardChange = (event) => {
+  const [wizardID, setWizardID] = React.useState(null);
+  const [wizardMatchingNameData, setWizardMatchingNameData] = React.useState(
+    []
+  );
+  const [toggleNameSelector, setToggleNameSelector] = React.useState(false);
+
+  const handleFindWizardChange = async (event) => {
     let name = "";
+    setToggleNameSelector(!toggleNameSelector);
     if (event.type === "click") {
-      console.log(event.target.innerHTML);
       name = event.target.innerText.toLowerCase().trim();
     }
     if (event.type === "keydown") {
-      console.log(`defaultValue`, event.target.value);
-      console.log("keydown");
+      // unable to retrieve event.target.value properly, will stick to just the click selector for now instead of down key as well
+      console.log(`event.type = 'keydown' , defaultValue`, event.target.value);
     }
-    const findMatchingNameID = props.allWizards.find(
+    const findMatchingNameID = await props.allWizards.find(
       (wizard) =>
         wizard.first_name.toLowerCase() +
           " " +
           wizard.last_name.toLowerCase() ===
         name
     )?.id;
-    console.log(findMatchingNameID);
+    setWizardID(findMatchingNameID);
+    await setWizardID((state) => {
+      fetchWizardByID(state);
+    });
   };
+
+  const fetchWizardByID = (id) => {
+    fetch(`http://localhost:8080/wizards/${id}`)
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setWizardMatchingNameData(response));
+  };
+
   return (
     <>
       <Autocomplete
@@ -30,9 +48,22 @@ export default function ComboBox(props) {
         options={props.allWizards.map((wizard) => {
           return wizard.first_name + " " + wizard.last_name;
         })}
-        sx={{ width: 300 }}
+        sx={{ width: 300, marginTop: "1vh" }}
         renderInput={(params) => <TextField {...params} label="Wizard Names" />}
       />
+      {wizardID !== null ? (
+        <div>
+          <p>
+            Name
+            {wizardMatchingNameData.first_name +
+              " " +
+              wizardMatchingNameData.last_name}
+          </p>
+          <p>Email: {wizardMatchingNameData.email}</p>
+          <p>House: {wizardMatchingNameData.house}</p>
+        </div>
+      ) : null}{" "}
+      <br />
     </>
   );
 }

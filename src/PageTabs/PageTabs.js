@@ -4,8 +4,28 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import DataGrid from "../DataGrid/DataGrid";
-import WizardAutoComplete from "../WizardAutoComplete/WizardAutoComplete";
+import DataGrid from "../DataGrid/DataGrid.js";
+import CreateWizard from "../CreateWizard/CreateWizard";
+import { styled } from "@mui/material/styles";
+
+const PREFIX = "BasicTabs";
+const classes = {
+  header: `${PREFIX}-header`,
+};
+
+const Header = styled("div")(({ theme }) => ({
+  [`&.${classes.header}`]: {
+    border: "1px solid black",
+    borderRadius: "5px",
+    textAlign: "center",
+    padding: "10px 0",
+    height: "5vhvh",
+    width: "100%",
+    color: "black",
+    marginBottom: "1vh",
+    fontWeight: "bold",
+  },
+}));
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,37 +60,14 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function BasicTabs(props) {
   const [value, setValue] = React.useState(0);
-  // TO DO : consider consildating this into something smaller to maintain all since it's repeating
-  const [allWizards, setAllWizards] = React.useState([]);
-  const [gryffindorWizards, setGryffindorWizards] = React.useState([]);
-  const [ravenclawWizards, setRavenclawWizards] = React.useState([]);
-  const [hufflepuffWizards, setHufflepuffWizards] = React.useState([]);
-  const [slytherinWizards, setSlytherinWizards] = React.useState([]);
-  React.useEffect(() => {
-    fetch(`http://localhost:8080/wizards?house=gryffindor`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setGryffindorWizards(response));
-    fetch(`http://localhost:8080/wizards?house=ravenclaw`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setRavenclawWizards(response));
-    fetch(`http://localhost:8080/wizards?house=hufflepuff`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setHufflepuffWizards(response));
-    fetch(`http://localhost:8080/wizards?house=slytherin`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setSlytherinWizards(response));
-    fetch(`http://localhost:8080/wizards`)
-      .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setAllWizards(response));
-  }, []);
-
+  const {
+    gryffindorWizards,
+    ravenclawWizards,
+    hufflepuffWizards,
+    slytherinWizards,
+  } = props;
   // although event is not used here, it is required as to utilize material ui basic tabs switching
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -93,24 +90,23 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Gryffindor
+        <Header className={classes.header}>Gryffindor</Header>
         <DataGrid wizards={gryffindorWizards} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Ravenclaw
+        <Header className={classes.header}>Ravenclaw</Header>
         <DataGrid wizards={ravenclawWizards} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Hufflepuff
+        <Header className={classes.header}>Hufflepuff</Header>
         <DataGrid wizards={hufflepuffWizards} />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Slytherin
+        <Header className={classes.header}>Slytherin</Header>
         <DataGrid wizards={slytherinWizards} />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Sorting Hat (stretch goal, randomize data and post into wizards
-        database)
+        <CreateWizard />
       </TabPanel>
       <TabPanel value={value} index={5}>
         Find Wizard Information
