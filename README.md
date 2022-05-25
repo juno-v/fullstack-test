@@ -10,11 +10,11 @@
 
 ## Project Structure
 
-    - the database lives in a .json file within app/server
-    - app/src/ show all of the components each in their older folders
+    - the database lives in a .json file within fullstack-testserver
+    - fullstack-testsrc/ show all of the components each in their older folders
     - design is used with the Material UI SX prop or the new styles integration,
     no external css files
-    - app/src/services contain a couple of requests
+    - fullstack-testsrc/services contain a couple of requests
     - images of project are located at the root
 
     *** the project was created by doing each feature in their
@@ -43,7 +43,7 @@
 
 ## Front End Set Up
 
-    1) run 'npm install' in root directory of project /app to install all tools
+    1) run 'npm install' in root directory of project to install all tools
     2) run 'npm start' to start the React project
     3) it should automatically start in your browser if you have a tab open,
     if not, navigate to 'http://localhost:3000'
@@ -53,7 +53,7 @@
 ## Back End Set Up
 
     1) cd in to the 'server' folder
-    *** located in app/server/ ***
+    *** located in fullstack-testserver/ ***
     1.2) run 'json-server --watch database.json --port 8080'
     *** this will start the server in your localhost/8080 ***
     1.3) The URL to visit in development is under 'Resources'
@@ -125,7 +125,7 @@ You may also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-fullstack-testdocs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -135,7 +135,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the section about [deployment](https://facebook.github.io/create-react-fullstack-testdocs/deployment) for more information.
 
 ### `npm run eject`
 
@@ -149,5 +149,5 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-fullstack-testdocs/getting-started).
 To learn React, check out the [React documentation](https://reactjs.org/).
