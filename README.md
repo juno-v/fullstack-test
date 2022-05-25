@@ -62,11 +62,11 @@
          For example: 'http://localhost:8080/wizards'
     2) endpoint details:
         GET /wizards - get all wizards
-        GET /wizards/{id} - get wizard by ID
-        POST /wizards - create a new wizard, ID is automatically generated
-        PUT /wizards/{id} - edit a wizard by ID
-        PATCH /wizards/{id} - patch a wizard by ID
-        DELETE /wizards/{id} - delete a wizard by ID
+        GET /wizards/{id} - get wizard by ID - ID required 
+        POST /wizards - create a new wizard, ID is automatically generated - 
+        PUT /wizards/{id} - edit a wizard by ID - ID required
+        PATCH /wizards/{id} - patch a wizard by ID -  ID required 
+        DELETE /wizards/{id} - delete a wizard by ID - ID required 
     *** you can test the endpoints by utilizing programs like Postman/Incomnia ***
     3) data object structure example:  {
                               "id": int,
