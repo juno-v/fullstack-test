@@ -3,37 +3,39 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { InputLabel } from "@mui/material";
 import Button from "@mui/material/Button";
+import { postWizard } from "../services/services";
 
 export default function BasicTextFields() {
-  const [createNewWizard, setCreateNewWizard] = React.useState({
-    firstName: "",
-    lastName: "",
+  const [newWizard, setNewWizard] = React.useState({
+    first_name: "",
+    last_name: "",
     email: "",
     house: "",
   });
+
   const [toggleWizardSorting, setToggleWizardSorting] = React.useState(false);
   React.useEffect(() => {
     // any time the first and last name is entered, automatically generate an email for the wizard
-    setCreateNewWizard((prevState) => ({
+    setNewWizard((prevState) => ({
       ...prevState,
       email:
-        createNewWizard.firstName.toLowerCase() +
+        newWizard.first_name.toLowerCase() +
         "." +
-        createNewWizard.lastName.toLowerCase() +
+        newWizard.last_name.toLowerCase() +
         "@hogwarts.com",
     }));
-  }, [createNewWizard.firstName, createNewWizard.lastName]);
+  }, [newWizard.first_name, newWizard.last_name]);
 
   const handleWizardChange = (event) => {
     const { name, value } = event.target;
-    setCreateNewWizard((prevState) => ({
+    setNewWizard((prevState) => ({
       ...prevState,
       [name]: value.toLowerCase(),
     }));
   };
-  const onCreateNewWizardSubmit = () => {
+  const onSubmitWizardName = () => {
     setToggleWizardSorting(!toggleWizardSorting);
-
+    // update new wizards object every time new house sorted for Wizard
     const hogwartsHouseList = [
       "hogwarts",
       "ravenclaw",
@@ -42,10 +44,14 @@ export default function BasicTextFields() {
     ];
     const generateRandomHouse =
       hogwartsHouseList[(Math.random() * hogwartsHouseList.length) | 0];
-    setCreateNewWizard((prevState) => ({
+    setNewWizard((prevState) => ({
       ...prevState,
       house: generateRandomHouse,
     }));
+  };
+
+  const onSubmitWizardData = () => {
+    postWizard(newWizard);
   };
   return (
     <Box
@@ -68,36 +74,44 @@ export default function BasicTextFields() {
         <h1>Enter Your Wizards First and Last Name to Enable Sorting</h1>
       </InputLabel>
       <TextField
-        value={createNewWizard.firstName}
+        value={newWizard.first_name}
         onChange={handleWizardChange}
         label="First Name"
-        name={"firstName"}
+        name={"first_name"}
         variant="outlined"
         required
       />
       <TextField
-        value={createNewWizard.lastName}
+        value={newWizard.last_name}
         onChange={handleWizardChange}
         label="Last Name"
-        name={"lastName"}
+        name={"last_name"}
         variant="outlined"
         required
       />
       <Button
         disabled={
-          createNewWizard.firstName.length === 0 &&
-          createNewWizard.lastName.length === 0
+          newWizard.first_name.length === 0 && newWizard.last_name.length === 0
         }
-        onClick={onCreateNewWizardSubmit}
+        onClick={onSubmitWizardName}
         variant="contained"
       >
         Put The Sorting Hat on Your New Wizard!
       </Button>
       {toggleWizardSorting ? (
-        <h3>
-          {" "}
-          Your Wizard Goes to House: {createNewWizard.house.toUpperCase()}
-        </h3>
+        <Box sx={{ width: "100%" }}>
+          Your Wizard Goes to House: {newWizard.house.toUpperCase()}
+          <Box>
+            <Button
+              sx={{ height: "5vh", width: "23vw", marginTop: "2vh" }}
+              onClick={onSubmitWizardData}
+              variant="contained"
+            >
+              Assign Your Wizard to {newWizard.house.toUpperCase()} and sort a
+              new Wizard!
+            </Button>
+          </Box>
+        </Box>
       ) : null}
     </Box>
   );
