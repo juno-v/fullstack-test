@@ -1,7 +1,6 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import DataGrid from "../DataGrid/DataGrid";
 
 export default function ComboBox(props) {
   const [wizardID, setWizardID] = React.useState(null);
