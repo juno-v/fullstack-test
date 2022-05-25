@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import DataGrid from "../DataGrid/DataGrid.js";
+import CreateWizard from "../CreateWizard/CreateWizard";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -102,8 +103,7 @@ export default function BasicTabs() {
         <DataGrid wizards={slytherinWizards} />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Sorting Hat (stretch goal, randomize data and post into wizards
-        database)
+        <CreateWizard />
       </TabPanel>
     </Box>
   );
