@@ -111,7 +111,7 @@ export default function BasicTabs(props) {
         <CreateWizard />
       </TabPanel>
       <TabPanel value={value} index={5}>
-        Find Wizard Information
+        <Header className={classes.header}>Find Wizard Information</Header>
         <WizardAutoComplete allWizards={allWizards} />
       </TabPanel>
     </Box>

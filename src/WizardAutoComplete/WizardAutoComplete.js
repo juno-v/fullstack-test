@@ -48,7 +48,7 @@ export default function ComboBox(props) {
         options={props.allWizards.map((wizard) => {
           return wizard.first_name + " " + wizard.last_name;
         })}
-        sx={{ width: 300, marginTop: "1vh" }}
+        sx={{ width: 300, marginTop: "2vh" }}
         renderInput={(params) => <TextField {...params} label="Wizard Names" />}
       />
       {wizardID !== null ? (
