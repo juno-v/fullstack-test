@@ -2,23 +2,35 @@
 
 ## Project Summary
 
-    This project utilizes key-value pair data using json server as the back end 
+    This project utilizes key-value pair data using json server as the back end
     paired with a React front end and Material UI for design.
     The theme is based off of a book series: Harry Potter.
     In this project user(s) will be able to manipulate data for Wizards.
         Check the 'Features Completed' section for what features exist.
 
 ## Below are some images of the UI for an over view.
-*** note: due to a time limit, UI may not look as robust and appealing ***
+
+**_ note: due to a time limit, UI may not look as robust and appealing _**
+
+#### Creating a Wizard
+
 ![Create Wizard](CreateWizard.png)
+
+#### Show Wizards in a Data Grid
+
+![Data Grid](DataGrid.png)
+
+#### Find a Wizard's information
+
+![Find Wizard](FindWizard.png)
 
 ## Front End Set Up
 
     1) run 'npm install' in root directory of project /app to install all tools
     2) run 'npm start' to start the React project
-    3) it should automatically start in your browser if you have a tab open, 
+    3) it should automatically start in your browser if you have a tab open,
     if not, navigate to 'http://localhost:3000'
-    4) You won't see data if you start the front end first, so move on to 
+    4) You won't see data if you start the front end first, so move on to
     the next steps and start up your back end
 
 ## Back End Set Up
@@ -48,7 +60,7 @@
 # Features Completed + Instructions
 
     1) Get all Wizards and display in a Data Grid in their own House Tabs
-        a) click any of the tabs for the Hogwarts House (GRYFFINDOR, RAVENCLAW, 
+        a) click any of the tabs for the Hogwarts House (GRYFFINDOR, RAVENCLAW,
         HUFFLEPUFF, SLYTHERIN)
         b) you may need to refresh and/or click a different tab and click the tab again
         c) each tab consits of a Data Grid with the Wizards that belong in that house
@@ -59,21 +71,21 @@
     2) Delete a wizard from database and remove row from Data Grid
         a) navigate to any house and click the 'delete' icon next to any wizard
         b) you will get an alert for a success/failure of Wizard deletion
-        c) you may need to refresh and come back to the tab you delete the Wizard 
+        c) you may need to refresh and come back to the tab you delete the Wizard
         from to see the updates
     3) Create a New Wizard
         a) navigate to 'SORTING HAT'
-        *** in the movies, you will see Wizards lined up in the dining hall 
+        *** in the movies, you will see Wizards lined up in the dining hall
         to wear the Sorting Hat to tell them which house they belong to. ***
         c) here you are required to type in a 'First Name' and a 'Last Name'
         d) this will then enable the 'PUT THE SORTING HAT ON YOUR NEW WIZARD' button
         e) click the button once you are satisfied with the first and last name of the Wizard
         f) You will then see that the Sorting Hat has randomized the Wizard to one of the four houses.
-        *** Users are able to shuffle to their hearts content for what house there is, 
-        but this is not how the story line goes :) I left it enabled for 
+        *** Users are able to shuffle to their hearts content for what house there is,
+        but this is not how the story line goes :) I left it enabled for
         those that want to be Gryffindor but end up something else.... Like me.... A RavenClawERR ***
         g) once satisfied, click the 'ASSIGN YOUR WIZARD TO ---- AND SORT A NEW WIZARD!'
-        h) this will clear all the info in the form and allow you to restart 
+        h) this will clear all the info in the form and allow you to restart
         the process for the next Wizard!
 
 ## Available Scripts
