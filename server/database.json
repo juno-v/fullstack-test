@@ -1,298 +1,298 @@
 {
-    "wizards": [
-      {
-        "id": 1,
-        "first_name": "Harry",
-        "last_name": "Potter",
-        "email": "harry.potter@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 2,
-        "first_name": "Emma",
-        "last_name": "Watson",
-        "email": "emma.watson@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 3,
-        "first_name": "Ron",
-        "last_name": "Weasley",
-        "email": "ron.weasley@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 4,
-        "first_name": "Neville",
-        "last_name": "Longbottom",
-        "email": "neville.longbottom@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 5,
-        "first_name": "Albus",
-        "last_name": "Dumbledore",
-        "email": "albus.dumbledore@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 6,
-        "first_name": "Minerva",
-        "last_name": "McGonagall",
-        "email": "minerva.mcGonagall@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 7,
-        "first_name": "Rubeus",
-        "last_name": "Hagrid",
-        "email": "rubeus.hagrid@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 8,
-        "first_name": "James",
-        "last_name": "Potter",
-        "email": "james.potter@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 9,
-        "first_name": "Lily",
-        "last_name": "Evens",
-        "email": "lily.evens@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 10,
-        "first_name": "Sirius",
-        "last_name": "Black",
-        "email": "sirius.black@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 11,
-        "first_name": "Remus",
-        "last_name": "Lupin",
-        "email": "remus.lupin@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 12,
-        "first_name": "Peter",
-        "last_name": "Pettigrew",
-        "email": "peter.pettigrew@hogwarts.com",
-        "house": "gryffindor"
-      },
-      {
-        "id": 13,
-        "first_name": "Rowena",
-        "last_name": "Ravenclaw",
-        "email": "rowena.ravenclaw@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 14,
-        "first_name": "Filius",
-        "last_name": "Flitwick",
-        "email": "filius.flitwick@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 15,
-        "first_name": "Luna",
-        "last_name": "Lovegood",
-        "email": "luna.lovegood@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 16,
-        "first_name": "Garrick",
-        "last_name": "Ollivander",
-        "email": "garrick.ollivander@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 17,
-        "first_name": "Helena",
-        "last_name": "Ravenclaw",
-        "email": "helena.ravenclaw@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 18,
-        "first_name": "Cho",
-        "last_name": "Chang",
-        "email": "cho.chang@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 19,
-        "first_name": "Gilderoy",
-        "last_name": "Lockhart",
-        "email": "hilderoy.lockhart@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 20,
-        "first_name": "Millicent",
-        "last_name": "Bagnold",
-        "email": "millicent.bagnold@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 21,
-        "first_name": "Ignatia",
-        "last_name": "Wildsmith",
-        "email": "ignnatia.wildsmith@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 22,
-        "first_name": "Quirinus",
-        "last_name": "Quirrell",
-        "email": "quirinus.quirrell@hogwarts.com",
-        "house": "ravenclaw"
-      },
-      {
-        "id": 23,
-        "first_name": "Helga",
-        "last_name": "Hufflepuff",
-        "email": "helga.hufflepuff@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 24,
-        "first_name": "Pamona",
-        "last_name": "Sprout",
-        "email": "pamona.sprout@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 25,
-        "first_name": "Nymphadora",
-        "last_name": "Tonks",
-        "email": "nymphadora.tonks@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 26,
-        "first_name": "Robert",
-        "last_name": "Pattison",
-        "email": "robert.pattison@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 27,
-        "first_name": "Newt",
-        "last_name": "Scamander",
-        "email": "newt.scamander@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 28,
-        "first_name": "Teddy",
-        "last_name": "Lupin",
-        "email": "teddy.lupin@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 29,
-        "first_name": "F",
-        "last_name": "Friar",
-        "email": "f.friar@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 30,
-        "first_name": "Theseus",
-        "last_name": "Scamander",
-        "email": "theseus.scamander@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 31,
-        "first_name": "Susan",
-        "last_name": "Bones",
-        "email": "susan.bones@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 32,
-        "first_name": "Hannah",
-        "last_name": "Abbott",
-        "email": "hannah.abbott@hogwarts.com",
-        "house": "hufflepuff"
-      },
-      {
-        "id": 33,
-        "first_name": "Salazar",
-        "last_name": "Slytherin",
-        "email": "salazar.slytherin@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 34,
-        "first_name": "Tom",
-        "last_name": "Riddle",
-        "email": "HeWhoMustNotBeNamed@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 35,
-        "first_name": "Severus",
-        "last_name": "Snape",
-        "email": "severus.snape@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 36,
-        "first_name": "Lucius",
-        "last_name": "Malfoy",
-        "email": "lucius.malfoy@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 37,
-        "first_name": "Narcissa",
-        "last_name": "Malfoy",
-        "email": "narcissa.malfoy@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 38,
-        "first_name": "Draco",
-        "last_name": "Malfoy",
-        "email": "draco.malfoy@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 39,
-        "first_name": "Bellatrix",
-        "last_name": "Lestrange",
-        "email": "bellatrix.lestrange@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 40,
-        "first_name": "Horace",
-        "last_name": "Slughorn",
-        "email": "horace.slughorn@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 41,
-        "first_name": "Leta",
-        "last_name": "Lestrange",
-        "email": "leta.lestrange@hogwarts.com",
-        "house": "slytherin"
-      },
-      {
-        "id": 42,
-        "first_name": "Andromeda",
-        "last_name": "Black",
-        "email": "andromeda.black@hogwarts.com",
-        "house": "slytherin"
-      }
-    ]
-  }
+  "wizards": [
+    {
+      "id": 1,
+      "first_name": "Harry",
+      "last_name": "Potter",
+      "email": "harry.potter@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 2,
+      "first_name": "Emma",
+      "last_name": "Watson",
+      "email": "emma.watson@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 3,
+      "first_name": "Ron",
+      "last_name": "Weasley",
+      "email": "ron.weasley@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 4,
+      "first_name": "Neville",
+      "last_name": "Longbottom",
+      "email": "neville.longbottom@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 5,
+      "first_name": "Albus",
+      "last_name": "Dumbledore",
+      "email": "albus.dumbledore@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 6,
+      "first_name": "Minerva",
+      "last_name": "McGonagall",
+      "email": "minerva.mcGonagall@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 7,
+      "first_name": "Rubeus",
+      "last_name": "Hagrid",
+      "email": "rubeus.hagrid@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 8,
+      "first_name": "James",
+      "last_name": "Potter",
+      "email": "james.potter@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 9,
+      "first_name": "Lily",
+      "last_name": "Evens",
+      "email": "lily.evens@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 10,
+      "first_name": "Sirius",
+      "last_name": "Black",
+      "email": "sirius.black@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 11,
+      "first_name": "Remus",
+      "last_name": "Lupin",
+      "email": "remus.lupin@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 12,
+      "first_name": "Peter",
+      "last_name": "Pettigrew",
+      "email": "peter.pettigrew@hogwarts.com",
+      "house": "gryffindor"
+    },
+    {
+      "id": 13,
+      "first_name": "Rowena",
+      "last_name": "Ravenclaw",
+      "email": "rowena.ravenclaw@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 14,
+      "first_name": "Filius",
+      "last_name": "Flitwick",
+      "email": "filius.flitwick@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 15,
+      "first_name": "Luna",
+      "last_name": "Lovegood",
+      "email": "luna.lovegood@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 16,
+      "first_name": "Garrick",
+      "last_name": "Ollivander",
+      "email": "garrick.ollivander@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 17,
+      "first_name": "Helena",
+      "last_name": "Ravenclaw",
+      "email": "helena.ravenclaw@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 18,
+      "first_name": "Cho",
+      "last_name": "Chang",
+      "email": "cho.chang@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 19,
+      "first_name": "Gilderoy",
+      "last_name": "Lockhart",
+      "email": "hilderoy.lockhart@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 20,
+      "first_name": "Millicent",
+      "last_name": "Bagnold",
+      "email": "millicent.bagnold@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 21,
+      "first_name": "Ignatia",
+      "last_name": "Wildsmith",
+      "email": "ignnatia.wildsmith@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 22,
+      "first_name": "Quirinus",
+      "last_name": "Quirrell",
+      "email": "quirinus.quirrell@hogwarts.com",
+      "house": "ravenclaw"
+    },
+    {
+      "id": 23,
+      "first_name": "Helga",
+      "last_name": "Hufflepuff",
+      "email": "helga.hufflepuff@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 24,
+      "first_name": "Pamona",
+      "last_name": "Sprout",
+      "email": "pamona.sprout@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 25,
+      "first_name": "Nymphadora",
+      "last_name": "Tonks",
+      "email": "nymphadora.tonks@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 26,
+      "first_name": "Robert",
+      "last_name": "Pattison",
+      "email": "robert.pattison@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 27,
+      "first_name": "Newt",
+      "last_name": "Scamander",
+      "email": "newt.scamander@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 28,
+      "first_name": "Teddy",
+      "last_name": "Lupin",
+      "email": "teddy.lupin@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 29,
+      "first_name": "F",
+      "last_name": "Friar",
+      "email": "f.friar@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 30,
+      "first_name": "Theseus",
+      "last_name": "Scamander",
+      "email": "theseus.scamander@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 31,
+      "first_name": "Susan",
+      "last_name": "Bones",
+      "email": "susan.bones@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 32,
+      "first_name": "Hannah",
+      "last_name": "Abbott",
+      "email": "hannah.abbott@hogwarts.com",
+      "house": "hufflepuff"
+    },
+    {
+      "id": 33,
+      "first_name": "Salazar",
+      "last_name": "Slytherin",
+      "email": "salazar.slytherin@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 34,
+      "first_name": "Tom",
+      "last_name": "Riddle",
+      "email": "HeWhoMustNotBeNamed@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 35,
+      "first_name": "Severus",
+      "last_name": "Snape",
+      "email": "severus.snape@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 36,
+      "first_name": "Lucius",
+      "last_name": "Malfoy",
+      "email": "lucius.malfoy@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 37,
+      "first_name": "Narcissa",
+      "last_name": "Malfoy",
+      "email": "narcissa.malfoy@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 38,
+      "first_name": "Draco",
+      "last_name": "Malfoy",
+      "email": "draco.malfoy@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 39,
+      "first_name": "Bellatrix",
+      "last_name": "Lestrange",
+      "email": "bellatrix.lestrange@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 40,
+      "first_name": "Horace",
+      "last_name": "Slughorn",
+      "email": "horace.slughorn@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 41,
+      "first_name": "Leta",
+      "last_name": "Lestrange",
+      "email": "leta.lestrange@hogwarts.com",
+      "house": "slytherin"
+    },
+    {
+      "id": 42,
+      "first_name": "Andromeda",
+      "last_name": "Black",
+      "email": "andromeda.black@hogwarts.com",
+      "house": "slytherin"
+    }
+  ]
+}
