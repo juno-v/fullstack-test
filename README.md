@@ -10,9 +10,9 @@
 
     Below are some images of the UI for an over view.
     *** note: due to a time limit, UI may not look as robust and appealing ***
-    ![data-grid](./READMEImages/CreateWizard.png?raw=true "Create Wizard")
-    ![create-wizard](./READMEImages/DataGrid.png?raw=true "Data Grid")
-    ![find-wizard](./READMEImages/FindWizard.png/?raw=true "Find Wizard")
+    ![data-grid](./READMEImages/CreateWizard.png "Create Wizard")
+    ![create-wizard](./READMEImages/DataGrid.png "Data Grid")
+    ![find-wizard](./READMEImages/FindWizard.png/ "Find Wizard")
 
 ## Front End Set Up
 
