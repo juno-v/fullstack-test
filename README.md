@@ -8,6 +8,16 @@
     In this project user(s) will be able to manipulate data for Wizards.
         Check the 'Features Completed' section for what features exist.
 
+## Project Structure 
+    - the database lives in a .json file within app/server 
+    - app/src/ show all of the components each in their older folders 
+    - design is used with the Material UI SX prop or the new styles integration, 
+    no external css files 
+    - app/src/services contain a couple of requests
+    - images of project are located at the root 
+
+    *** the project was created by doing each feature in their own branch, feel free to look into the branches to see the file changes ***
+
 ## Below are some images of the UI for an over view.
 
 **_ note: due to a time limit, UI may not look as robust and appealing _**
