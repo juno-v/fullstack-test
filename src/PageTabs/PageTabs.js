@@ -57,6 +57,7 @@ export default function BasicTabs() {
           <Tab label="Ravenclaw" {...a11yProps(1)} />
           <Tab label="Hufflepuff" {...a11yProps(2)} />
           <Tab label="Slytherin" {...a11yProps(3)} />
+          <Tab label="Sorting Hat" {...a11yProps(4)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -70,6 +71,9 @@ export default function BasicTabs() {
       </TabPanel>
       <TabPanel value={value} index={3}>
         Slytherin
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        Sorting Hat
       </TabPanel>
     </Box>
   );
