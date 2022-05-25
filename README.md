@@ -8,11 +8,9 @@
     In this project user(s) will be able to manipulate data for Wizards.
         Check the 'Features Completed' section for what features exist.
 
-    Below are some images of the UI for an over view.
-    *** note: due to a time limit, UI may not look as robust and appealing ***
-    ![data-grid](./READMEImages/CreateWizard.png "Create Wizard")
-    ![create-wizard](./READMEImages/DataGrid.png "Data Grid")
-    ![find-wizard](./READMEImages/FindWizard.png/ "Find Wizard")
+## Below are some images of the UI for an over view.
+*** note: due to a time limit, UI may not look as robust and appealing ***
+![Data Grid](CreateWizard.ping)
 
 ## Front End Set Up
 
