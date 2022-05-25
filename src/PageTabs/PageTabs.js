@@ -41,6 +41,7 @@ function a11yProps(index) {
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
+  // TO DO : consider consildating this into something smaller to maintain all since it's repeating
   const [gryffindorWizards, setGryffindorWizards] = React.useState([]);
   const [ravenclawWizards, setRavenclawWizards] = React.useState([]);
   const [hufflepuffWizards, setHufflepuffWizards] = React.useState([]);
