@@ -58,8 +58,8 @@ export default function ComboBox(props) {
               " " +
               wizardMatchingNameData.last_name}
           </p>
-          <p>Email: {wizardMatchingNameData.email.toUpperCase()}</p>
-          <p>House: {wizardMatchingNameData.house.toUpperCase()}</p>
+          <p>Email: {wizardMatchingNameData.email}</p>
+          <p>House: {wizardMatchingNameData.house}</p>
         </div>
       ) : null}
       <br />
