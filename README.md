@@ -88,6 +88,11 @@
         h) this will clear all the info in the form and allow you to restart
         the process for the next Wizard!
 
+    Stretch Goals
+        1) add testing with React Testing Library
+        2) add confirm delete when deleting a wizard
+        3) enable PUT/PATCH features
+
 ## Available Scripts
 
 In the project directory, you can run:
