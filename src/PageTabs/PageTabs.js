@@ -71,7 +71,7 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         Gryffindor
-        <DataGrid />
+        <DataGrid wizards={wizards} />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Ravenclaw

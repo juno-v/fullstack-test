@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/DeleteOutlined";
@@ -10,52 +9,9 @@ import {
   DataGridPro,
   GridActionsCellItem,
 } from "@mui/x-data-grid-pro";
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate,
-  randomId,
-} from "@mui/x-data-grid-generator";
 
-const initialRows = [
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 25,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 36,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 19,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 28,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 23,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-];
-
-export default function FullFeaturedCrudGrid() {
+export default function FullFeaturedCrudGrid(props) {
+  const initialRows = props.wizards;
   const [rows, setRows] = React.useState(initialRows);
   const [rowModesModel, setRowModesModel] = React.useState({});
 
@@ -99,12 +55,12 @@ export default function FullFeaturedCrudGrid() {
 
   const columns = [
     {
-      field: "firstName",
+      field: "first_name",
       headerName: "First Name",
       width: 180,
       editable: true,
     },
-    { field: "lastName", headerName: "Last Name", editable: true },
+    { field: "last_name", headerName: "Last Name", editable: true },
     {
       field: "email",
       headerName: "Email",
@@ -112,7 +68,7 @@ export default function FullFeaturedCrudGrid() {
       editable: true,
     },
     {
-      field: "House",
+      field: "house",
       headerName: "House",
       width: 180,
       editable: true,
