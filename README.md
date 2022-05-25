@@ -49,6 +49,8 @@
     if not, navigate to 'http://localhost:3000'
     4) You won't see data if you start the front end first, so move on to
     the next steps and start up your back end
+    5) if you run into something like 'sh  react scripts command not found' try and
+    install the react scripts : npm i react-scripts or remove node modules and reinstall
 
 ## Back End Set Up
 
@@ -74,13 +76,16 @@
                               "house": "string" // gryffindor, ravenclaw, hufflepuff, slytherin
                             }
     4) if you see this error 'Some error occurred Error: listen EACCES: permission denied 8080\'
-    it might be an issue with Windows, use a Mac device to clone and test locally 
-    5) if you are having any errors with the cmd try installing the json server individually or globally with the following cmds: 
+    it might be an issue with Windows, use a Mac device to clone and test locally
+    5) if you are having any errors with starting the back end cmd try installing the json server individually or globally with the following cmds:
 
         npm install -g json-server
 
     If you install it locally in your project, use npx to run it
-        npx json-server --watch db.json
+    this usually is able to start up the server
+        npx json-server --watch database.json
+    IMPORTANT: make sure you are calling the watch on the database.json file with the wizards
+    data, it might generate a new db.json of some sort so you will be viewing the wrong data
 
 # Features Completed + Instructions
 
