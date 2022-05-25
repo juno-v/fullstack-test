@@ -1,3 +1,30 @@
+# Project Instructions: 
+
+# Run 'npm install' in root directory of project 
+
+# Set up backend 
+## Steps to start the back-end server:
+(*Server created with json-server*)
+<br />
+
+### 1) cd /app/server 
+### 2) json-server --watch database.json
+### The URL to visit in development is under 'Resources' 
+### For example: 'http://localhost:3000/wizards'
+### The JSON server automatically creates endpoint such as: 
+<br />
+
+### GET    /employees
+### GET    /employees/{id}
+### POST   /employees
+### PUT    /employees/{id}
+### PATCH  /employees/{id}
+### DELETE /employees/{id}
+<br />
+
+#### *** you do not need to start/stop to see a refresh list of the back end. you only need to refresh the URL to see the updated data.
+#### *** A POST, PUT or PATCH request should include 'Content-Type: application/json' header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -42,30 +69,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# fullstack-test
